@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Fill</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Address</h1>
+        <form id="myForm">
+            <row id="countryRow">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Ex:India"><br><br>
+            </row>
+
+            <row id="stateRow">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Ex:Tamil Nadu"><br><br>
+            </row>
+
+            <row id="districtRow">
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" placeholder="Ex:Chennai"><br><br>
+            </row>
+
+            <row id="cityRow">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Ex:Tambaram"><br><br>
+            </row>
+
+            <row id="zipRow">
+            <label for="zip">Zip:</label>
+            <input type="number" id="zip" name="zip" placeholder="Ex:600045"><br><br>
+            </row>
+            <h1 style="color: red; font-size: 13px; margin-right: 350px;" id="error">please fill all the details!</h1>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        </div>
+    </body>
+    <style>
+        h1{
+            text-align: center;
+            color:rgb(2, 2, 92);
+            font-family: Arial, sans-serif; 
+        }
+        #container {
+            width: 500px;
+            height:auto;
+            margin: 0 auto;
+            background-color: rgb(246, 183, 24);
+            padding: 20px;
+            margin-top: 100px;
+            border-radius: 3px;
+        }
+        label{
+            color:rgb(2, 2, 92);
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        input{
+            border-style: none;
+            height:30px;
+            width: 300px;
+            border-radius: 4px;
+            font-size: 18px;
+            color: rgb(2, 2, 92);
+            font-family: sans-serif;
+        }
+        button{
+            background-color: white;
+            border-style: none;
+            width: 100px;
+            height: 25px;
+            border-radius: 4px;
+            color:rgb(2, 2, 92);
+            font-weight: 600;
+            font-size: medium;
+        }
+    </style>
+    <script src="script.js"></script>
+</html>
