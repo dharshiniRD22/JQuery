@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div id="container" style="height:auto;">
+            <form id="student percentage">
+            <h1 style="text-align: center;">Student Percentage</h1>
+        <table style="margin-left: auto; margin-right: auto; width: 800px; height: 600px;">
+            <tr>
+                <th>Name:</th> 
+                <td> <input type="text" placeholder="Ex: John Doe" id="name"> </td>
+                <th>Register No.:</th>
+                <td> <input type="number" placeholder="Ex: 411622104008" id="reg"> </td>
+            </tr>
+            <tr>
+                <th>class:</th> 
+                <td> <input type="text" placeholder="Ex: 10" id="class"> </td>
+                <th>Section:</th>
+                <td> <input type="text" placeholder="Ex: A" id="sec"> </td>
+            </tr>
+            <tr>
+                <th>S No.</th>
+                <th>Subject Name</th>
+                <th>Total mark</th>
+                <th>Mark Obtained</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Tamil</td>
+                <td>100 /</td>
+                <td> <input type="number" id="tamil" >
+                <h5 id="tamile"> your mark exceed 100 !</h5>
+            <h4 class="Pass" id="tamilp">Pass</h4>
+            <h4 class="Fail" id="tamilf">Fail</h4> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>english</td>
+                <td>100 /</td>
+                <td> <input type="number" id="english" >
+                <h5 id="englishe"> your mark exceed 100 !</h5>
+            <h4 class="Pass" id="englishp">Pass</h4>
+            <h4 class="Fail" id="englishf">Fail</h4> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Science</td>
+                <td>100 /</td>
+                <td> <input type="number" id="science">
+                <h5 id="sciencee"> your mark exceed 100 !</h5>
+            <h4 class="Pass" id="sciencep">Pass</h4>
+            <h4 class="Fail" id="sciencef">Fail</h4> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Maths</td>
+                <td>100 /</td>
+                <td> <input type="number" id="maths" > 
+                <h5 id="mathse"> your mark exceed 100 !</h5>
+            <h4 class="Pass" id="mathsp">Pass</h4>
+            <h4 class="Fail" id="mathsf">Fail</h4></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Social</td>
+                <td>100 /</td>
+                <td> <input type="number" id="social" > 
+                <h5 id="sociale"> your mark exceed 100 !</h5>
+            <h4 class="Pass" id="socialp">Pass</h4>
+            <h4 class="Fail" id="socialf">Fail</h4></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>Total</th>
+                <th>500 /</th>
+                <th><span id="Total" style="color:black;">0</span>
+                    <span><h4 id="pp" style="color:green">Pass</h4></span>
+                    <span><h4 id="pf" style="color:red">Fail</h4></span>
+                </th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>Percentage:</th>
+                <th id="average">0</th>
+            </tr>
+            </table>
+            <!-- <button id="submit">Submit</button> -->
+             </form>
+            </div>
+    </body>
+    <style>
+        table{
+            font-family: arial;
+            border-collapse: collapse;
+            width: 100px;
+            padding: 30px;
+        }
+        td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+button{
+    margin-top: 20px;
+    margin-left: 700px;
+    height:25px;
+    width: 100px;
+}
+input{
+    height: 25px;
+    width: 200px;
+    border-color: #000000;
+
+}
+th{
+    font-size: 20px;
+}
+td{
+    font-size: 18px;
+}
+h5{
+  color: red;
+}
+#container{
+    border: 2px solid black;
+    border-top: 2px solid black;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding: 20px;
+}
+.Pass{
+    color:green;
+}
+.Fail{
+    color:red;
+}
+    </style>
+    <script src="script.js"></script>
+</html>
