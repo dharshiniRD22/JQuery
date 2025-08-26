@@ -47,11 +47,11 @@
 // })
 
 $('#tamil,#english,#science,#maths,#social').on('keyup', function () {
-     var tamil = parseInt($('#tamil').val()) || 0;
-    var english = parseInt($('#english').val()) || 0;
-    var science = parseInt($('#science').val()) || 0;
-    var maths = parseInt($('#maths').val()) || 0;
-    var social = parseInt($('#social').val()) || 0;
+     var tamil = parseInt($('#tamil').val()) ;
+    var english = parseInt($('#english').val()) ;
+    var science = parseInt($('#science').val()) ;
+    var maths = parseInt($('#maths').val()) ;
+    var social = parseInt($('#social').val()) ;
 
     var total = tamil +english+science + maths + social;
     var average = (total / 5);
@@ -173,22 +173,3 @@ $('#social').on('keyup', function () {
     }
 })
 
-// $('#tamil','#english','#science','#maths','#social').on('keyup', function () {
-//      var tamil = $('#tamil').val();
-//     var english = $('#english').val();
-//     var science = $('#science').val();
-//     var maths = $('#maths').val();
-//     var social = $('#social').val();
-
-//     var total = parseInt(tamil) + parseInt(english) + parseInt(science) + parseInt(maths) + parseInt(social);
-//     var average = (total / 5+"%");
-//     $('#Total').text(total);
-//     $('#average').text(average);
-//     if(average < 35){
-//         $('#average').css("color", "red");
-//         $('#pf').show();
-//     } else {
-//         $('#average').css("color", "green");
-//         $('#pp').show();
-//     }
-// })
