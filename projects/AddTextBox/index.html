@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1 style="text-align: center;color: darkblue;"> Enter your Name</h1>
+        <form id="myForm">
+            <label style="color: darkblue;font-weight: 700;font-size: 20px;"> Name</label><br>
+        </form>
+    </div>
+</body>
+<style>
+    #container {
+        background-color: rgb(246, 185, 17);
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    input {
+        width: 200px;
+        border-radius: 5px;
+        height: 25px;
+    }
+
+    button {
+        margin-left: 5px;
+        background-color: darkblue;
+        color: white;
+        font-weight: 700;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+
+<script>
+    let items = [];
+    function render() {
+        $('#myForm ul').remove();
+        items.forEach((Value, index) => {
+            let ul = $('<ul></ul>');
+            let input = $('<input type="text">').val(Value);
+
+            input.on('input', function () {
+                items[index] = $(this).val();
+            });
+
+            let addBtn = $('<button style="background-color: darkblue;color: white;font-weight: 700;">+</button>').on
+                ('click', function (e) {
+                    e.preventDefault();
+                    items.splice(index + 1, 0, "");
+                    render();
+                });
+
+            let delBtn = $('<button style="background-color: darkblue;color: white;font-weight: 700;">-</button>').on
+                ('click', function (e) {
+                    e.preventDefault();
+                    items.splice(index, 1);
+                    render();
+                });
+
+            ul.append(input, addBtn, delBtn);
+            $('#myForm').append(ul);
+        });
+    }
+    items.push("");
+    render();
+
+</script>
+
+</html>
