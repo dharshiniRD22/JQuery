@@ -2,86 +2,64 @@
 <html>
 
 <head>
-    <title>Form Validation</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Dynamic Form with Array Fields</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <div id="container">
-        <h1 style="text-align: center;color: darkblue;"> Enter your Name</h1>
-        <form id="myForm">
-            <label style="color: darkblue;font-weight: 700;font-size: 20px;"> Name</label><br>
-        </form>
+  <form id="Form">
+    <div id="Container">
+      <div class="row">
+        <input type="text" name="name[]" placeholder="Name" id="name">
+        <input type="number" name="amount[]" placeholder="Amount" id="amount">
+        <button type="button" class="add" id="add">Add</button>
+        <button type="button" class="delete" id="delete">Delete</button>
+      </div>
     </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="total"></div>
+  <script src="script.js"></script>
 </body>
 <style>
-    #container {
-        background-color: rgb(246, 185, 17);
-        margin-left: auto;
-        margin-right: auto;
-        width: 500px;
-        border-radius: 5px;
-        padding: 20px;
-    }
+  .row {
+    margin-top: 10px;
+    padding: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 
-    ul {
-        list-style: none;
-    }
-
-    input {
-        width: 200px;
-        border-radius: 5px;
-        height: 25px;
-    }
-
-    button {
-        margin-left: 5px;
-        background-color: darkblue;
-        color: white;
-        font-weight: 700;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        opacity: 0.8;
-    }
+  #total {
+    margin-top: 15px;
+    font-weight: bold;
+    color: darkblue;
+  }
+  #Form{
+    background-color: rgb(248, 197, 69);
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  /* #name, #amount{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    border-color: rgb(30, 47, 108);
+  }
+  #add, #delete{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(30, 47, 108);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+  } */
 </style>
-
-<script>
-    let items = [];
-    function render() {
-        $('#myForm ul').remove();
-        items.forEach((Value, index) => {
-            let ul = $('<ul></ul>');
-            let input = $('<input type="text">').val(Value);
-
-            input.on('input', function () {
-                items[index] = $(this).val();
-            });
-
-            let addBtn = $('<button style="background-color: darkblue;color: white;font-weight: 700;">+</button>').on
-                ('click', function (e) {
-                    e.preventDefault();
-                    items.splice(index + 1, 0, "");
-                    render();
-                });
-
-            let delBtn = $('<button style="background-color: darkblue;color: white;font-weight: 700;">-</button>').on
-                ('click', function (e) {
-                    e.preventDefault();
-                    items.splice(index, 1);
-                    render();
-                });
-
-            ul.append(input, addBtn, delBtn);
-            $('#myForm').append(ul);
-        });
-    }
-    items.push("");
-    render();
-
-</script>
 
 </html>
